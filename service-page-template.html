@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Services | Wakeman Heating</title>
+    <meta name="description" content="Professional plumbing services from Wakeman Heating. We provide leak repairs, pipe installations, bathroom fitting, and emergency plumbing services across the UK.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation (same as homepage) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <!-- Logo placeholder -->
+                    <div class="text-2xl font-bold text-blue-600">
+                        <span>Wakeman Heating</span>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="plumbing.html" class="text-blue-600 font-medium">Plumbing</a>
+                    <a href="heating.html" class="text-gray-700 hover:text-blue-600 font-medium">Heating</a>
+                    <a href="renewables.html" class="text-gray-700 hover:text-blue-600 font-medium">Renewables</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Emergency Contact -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+441234567890" class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        Emergency Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Service Page Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-4">Professional Plumbing Services</h1>
+                    <p class="text-xl mb-8">Reliable plumbing solutions for residential and commercial properties across the UK.</p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="chatBotTrigger" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                            <i class="fas fa-comment mr-2"></i>
+                            Chat for a Plumbing Quote
+                        </button>
+                        
+                        <a href="tel:+441234567890" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition flex items-center justify-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <img src="/api/placeholder/600/400" alt="Professional plumbing services" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="mb-4">Don't see your question here? Ask our AI assistant or contact us directly.</p>
+                <button id="faqChatTrigger" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                    <i class="fas fa-comment-dots mr-2"></i>
+                    Chat with Our Assistant
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (same as homepage) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Wakeman Heating</h3>
+                    <p class="mb-4">Your trusted partner for plumbing, heating, and renewable energy solutions across the UK.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="plumbing.html" class="hover:text-blue-400">Plumbing Services</a></li>
+                        <li><a href="heating.html" class="hover:text-blue-400">Heating Services</a></li>
+                        <li><a href="renewables.html" class="hover:text-blue-400">Renewable Energy</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Emergency Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                        <li><a href="#" class="hover:text-blue-400">FAQs</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 123 Heating Street, London, UK</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +44 1234 567890</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> info@wakemanheating.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Wakeman Heating. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot Widget (Placeholder) -->
+    <div id="chatWidget" class="chat-widget hidden">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="width: 350px;">
+            <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold">Wakeman Heating Assistant</h3>
+                <button id="closeChat" class="text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="chatMessages" class="p-4 h-96 overflow-y-auto bg-gray-50">
+                <!-- Messages will appear here -->
+                <div class="mb-4">
+                    <div class="bg-blue-100 p-3 rounded-lg inline-block">
+                        <p class="text-gray-800">Hello! I'm your Wakeman Heating assistant. How can I help with your plumbing needs today?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-4 border-t">
+                <div class="flex">
+                    <input type="text" id="messageInput" class="flex-1 p-2 border border-gray-300 rounded-l" placeholder="Type your message...">
+                    <button id="sendMessage" class="bg-blue-600 text-white p-2 rounded-r">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Trigger Button (Always visible) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="openChat" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
+            <i class="fas fa-comment-dots text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Simple JavaScript for Chatbot Toggle -->
+    <script>
+        // Chat toggle functionality
+        document.getElementById('openChat').addEventListener('click', function() {
+            document.getElementById('chatWidget').classList.remove('hidden');
+            this.classList.add('hidden');
+        });
+        
+        document.getElementById('closeChat').addEventListener('click', function() {
+            document.getElementById('chatWidget').classList.add('hidden');
+            document.getElementById('openChat').classList.remove('hidden');
+        });
+        
+        // Connect all chat trigger buttons
+        const chatTriggers = [
+            'chatBotTrigger',
+            'pricingChatTrigger',
+            'faqChatTrigger',
+            'finalChatTrigger'
+        ];
+        
+        chatTriggers.forEach(triggerId => {
+            const element = document.getElementById(triggerId);
+            if (element) {
+                element.addEventListener('click', function() {
+                    document.getElementById('chatWidget').classList.remove('hidden');
+                    document.getElementById('openChat').classList.add('hidden');
+                });
+            }
+        });
+        
+        // Connect all service card chat buttons
+        const chatButtons = document.querySelectorAll('.chat-trigger');
+        chatButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('chatWidget').classList.remove('hidden');
+                document.getElementById('openChat').classList.add('hidden');
+            });
+        });
+        
+        // FAQ accordion functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Toggle icon
+                if (answer.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    
+    <!-- Call to Action Section -->
+    <section class="bg-blue-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Solve Your Plumbing Problems?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Our professional plumbers are standing by to assist you with all your plumbing needs. Get a quote instantly or schedule a service today.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <button id="finalChatTrigger" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    <i class="fas fa-comment mr-2"></i>
+                    Get an Instant Quote
+                </button>
+                
+                <a href="tel:+441234567890" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition inline-flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    Call Us: +44 1234 567890
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Service Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Our Plumbing Services</h2>
+                <p class="text-xl text-gray-600 mt-4">Comprehensive plumbing solutions delivered by certified professionals</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-wrench text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Emergency Repairs</h3>
+                    <p class="text-gray-600 mb-4">Fast response to leaking pipes, burst pipes, blocked drains, and other plumbing emergencies. Available 24/7.</p>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>24/7 Emergency Response</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Burst Pipe Repairs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Leak Detection & Repair</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Blocked Drain Clearance</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-800">Starting from £80</p>
+                    <button class="chat-trigger mt-4 bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition w-full">Get a Quote</button>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-shower text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bathroom & Kitchen Installations</h3>
+                    <p class="text-gray-600 mb-4">Complete bathroom and kitchen installations, from replacing taps to full room renovations.</p>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Bathroom Suite Installations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Kitchen Sink & Tap Fitting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Shower Installations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Toilet & Bath Replacements</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-800">Starting from £200</p>
+                    <button class="chat-trigger mt-4 bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition w-full">Get a Quote</button>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-water text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Water Systems & Maintenance</h3>
+                    <p class="text-gray-600 mb-4">Installation and maintenance of water systems, including water tanks, pumps, and filtration systems.</p>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Water Tank Installations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Water Pump Repairs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Filtration System Fitting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Water Pressure Issues</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-800">Starting from £150</p>
+                    <button class="chat-trigger mt-4 bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition w-full">Get a Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Why Choose Wakeman Heating for Plumbing</h2>
+                <p class="text-xl text-gray-600 mt-4">What sets our plumbing services apart</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 mb-4 flex justify-center">
+                        <i class="fas fa-certificate text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Certified Plumbers</h3>
+                    <p class="text-gray-600">Our plumbers are fully certified with extensive training and experience.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 mb-4 flex justify-center">
+                        <i class="fas fa-clock text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">24/7 Availability</h3>
+                    <p class="text-gray-600">Emergency plumbing services available 24/7, 365 days a year.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 mb-4 flex justify-center">
+                        <i class="fas fa-pound-sign text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Transparent Pricing</h3>
+                    <p class="text-gray-600">Clear pricing with no hidden fees or unexpected charges.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 mb-4 flex justify-center">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Guaranteed Workmanship</h3>
+                    <p class="text-gray-600">All our plumbing work comes with a 12-month warranty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Plumbing Service Pricing</h2>
+                <p class="text-xl text-gray-600 mt-4">Transparent pricing for our most common plumbing services</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr class="bg-blue-600 text-white">
+                                <th class="py-3 px-4 text-left">Service</th>
+                                <th class="py-3 px-4 text-left">Standard Rate</th>
+                                <th class="py-3 px-4 text-left">Emergency Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="py-3 px-4 font-medium">Leak Repair</td>
+                                <td class="py-3 px-4">From £80</td>
+                                <td class="py-3 px-4">From £150</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">Drain Unblocking</td>
+                                <td class="py-3 px-4">From £85</td>
+                                <td class="py-3 px-4">From £160</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">Tap Replacement</td>
+                                <td class="py-3 px-4">From £70</td>
+                                <td class="py-3 px-4">From £140</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">Toilet Installation</td>
+                                <td class="py-3 px-4">From £180</td>
+                                <td class="py-3 px-4">From £240</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">Shower Installation</td>
+                                <td class="py-3 px-4">From £250</td>
+                                <td class="py-3 px-4">From £320</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">Full Bathroom Installation</td>
+                                <td class="py-3 px-4">From £1,200</td>
+                                <td class="py-3 px-4">N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <p class="text-gray-600 mb-4">Prices may vary based on the complexity of the job and specific requirements.</p>
+                    <button id="pricingChatTrigger" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                        <i class="fas fa-calculator mr-2"></i>
+                        Get a Custom Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQs Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 mt-4">Common questions about our plumbing services</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 bg-white rounded-lg shadow overflow-hidden">
+                    <div class="faq-question px-6 py-4 cursor-pointer flex justify-between items-center">
+                        <h3 class="text-lg font-medium">What payment methods do you accept?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </div>
+                    <div class="faq-answer px-6 py-4 bg-gray-50 hidden">
+                        <p class="text-gray-600">We accept all major credit and debit cards, bank transfers, and cash payments. For larger jobs, we typically require a deposit upfront with the balance due upon completion of the work.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-6 bg-white rounded-lg shadow overflow-hidden">
+                    <div class="faq-question px-6 py-4 cursor-pointer flex justify-between items-center">
+                        <h3 class="text-lg font-medium">Are your plumbers certified and insured?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </div>
+                    <div class="faq-answer px-6 py-4 bg-gray-50 hidden">
+                        <p class="text-gray-600">Yes, all our plumbers are fully certified, experienced professionals. We are fully insured with public liability insurance and professional indemnity insurance for your peace of mind.</p>
+                    </div>
+                </div>How quickly can you respond to a plumbing emergency?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </div>
+                    <div class="faq-answer px-6 py-4 bg-gray-50 hidden">
+                        <p class="text-gray-600">For emergency plumbing issues, we typically respond within 1-2 hours, depending on your location. Our emergency team is available 24/7, including weekends and holidays.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 bg-white rounded-lg shadow overflow-hidden">
+                    <div class="faq-question px-6 py-4 cursor-pointer flex justify-between items-center">
+                        <h3 class="text-lg font-medium">Do you offer warranties on plumbing work?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </div>
+                    <div class="faq-answer px-6 py-4 bg-gray-50 hidden">
+                        <p class="text-gray-600">Yes, all our plumbing work comes with a 12-month warranty on both parts and labor. This covers any issues that might arise from the work we've completed.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 bg-white rounded-lg shadow overflow-hidden">
+                    <div class="faq-question px-6 py-4 cursor-pointer flex justify-between items-center">
+                        <h3 class="text-lg font-medium">How do I know if I have a water leak?</h3>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </div>
+                    <div class="faq-answer px-6 py-4 bg-gray-50 hidden">
+                        <p class="text-gray-600">Signs of a water leak include unexplained increases in your water bill, damp spots on walls or ceilings, reduced water pressure, or the sound of running water when no taps are on. If you suspect a leak, it's best to have it checked promptly to prevent water damage.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 bg-white rounded-lg shadow overflow-hidden">
+                    <div class="faq-question px-6 py-4 cursor-pointer flex justify-between items-center">
+                        <h3 class="text-lg font-medium">

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakeman Heating - Professional Plumbing, Heating & Renewable Energy Services</title>
+    <meta name="description" content="Wakeman Heating provides professional plumbing, heating, and renewable energy services across the UK. Get instant quotes via our AI assistant.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <!-- Logo placeholder -->
+                    <div class="text-2xl font-bold text-blue-600">
+                        <span>Wakeman Heating</span>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Plumbing</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Heating</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Renewables</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Emergency Contact -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+441234567890" class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        Emergency Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Heating & Plumbing Services</h1>
+                    <p class="text-xl mb-8">Your trusted local provider for all plumbing, heating, and renewable energy solutions.</p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="chatBotTrigger" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                            <i class="fas fa-comment mr-2"></i>
+                            Chat for an Instant Quote
+                        </button>
+                        
+                        <a href="https://wa.me/441234567890" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <img src="/api/placeholder/600/400" alt="Plumbing services" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plumbing Service Card -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
+                    <img src="/api/placeholder/400/250" alt="Plumbing services" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Plumbing Services</h3>
+                        <p class="text-gray-600 mb-4">Expert solutions for leaks, pipe repairs, installations, and all your plumbing needs.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Heating Service Card -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
+                    <img src="/api/placeholder/400/250" alt="Heating services" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Heating Services</h3>
+                        <p class="text-gray-600 mb-4">Boiler installation, repairs, central heating systems, and maintenance services.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Renewables Service Card -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
+                    <img src="/api/placeholder/400/250" alt="Renewable energy solutions" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Renewable Energy</h3>
+                        <p class="text-gray-600 mb-4">Solar heating, heat pumps, and sustainable energy solutions for your home.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Wakeman Heating?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Certification -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-blue-600 text-white p-4 rounded-full mb-4">
+                        <i class="fas fa-certificate text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Certified Professionals</h3>
+                    <p class="text-gray-600">All our technicians are fully certified and experienced professionals.</p>
+                </div>
+                
+                <!-- Emergency Service -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-blue-600 text-white p-4 rounded-full mb-4">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Emergency Services</h3>
+                    <p class="text-gray-600">24/7 emergency services available for urgent plumbing and heating issues.</p>
+                </div>
+                
+                <!-- Customer Reviews -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-blue-600 text-white p-4 rounded-full mb-4">
+                        <i class="fas fa-star text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Top-Rated Service</h3>
+                    <p class="text-gray-600">Highly rated by our customers with excellent testimonials and reviews.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Exceptional service from start to finish. The AI quote system was spot on, and the technician arrived on time and completed the job professionally."</p>
+                    <p class="font-bold">— Jane S., London</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I had an emergency heating issue, and Wakeman Heating responded within the hour. Fantastic service at a fair price. Highly recommended!"</p>
+                    <p class="font-bold">— Mark T., Manchester</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us Today</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                    <p class="mb-6">Have questions or need a quote? Contact us directly or use our AI assistant for an instant response.</p>
+                    
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-phone-alt mr-4 text-xl"></i>
+                        <a href="tel:+441234567890" class="hover:underline">+44 1234 567890</a>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-envelope mr-4 text-xl"></i>
+                        <a href="mailto:info@wakemanheating.com" class="hover:underline">info@wakemanheating.com</a>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-whatsapp mr-4 text-xl"></i>
+                        <a href="https://wa.me/441234567890" class="hover:underline">WhatsApp Us</a>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-4 mt-8">Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 4:00 PM</p>
+                    <p>Sunday: Emergency Services Only</p>
+                </div>
+                
+                <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="name">Name</label>
+                            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded" placeholder="Your Name">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="email">Email</label>
+                            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded" placeholder="Your Email">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="phone">Phone</label>
+                            <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded" placeholder="Your Phone Number">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="message">Message</label>
+                            <textarea id="message" class="w-full p-3 border border-gray-300 rounded" rows="4" placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded font-bold hover:bg-blue-700 transition w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Wakeman Heating</h3>
+                    <p class="mb-4">Your trusted partner for plumbing, heating, and renewable energy solutions across the UK.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">Plumbing Services</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Heating Services</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Renewable Energy</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Emergency Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+                        <li><a href="#" class="hover:text-blue-400">FAQs</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 123 Heating Street, London, UK</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +44 1234 567890</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> info@wakemanheating.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Wakeman Heating. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot Widget (Placeholder) -->
+    <div id="chatWidget" class="chat-widget hidden">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="width: 350px;">
+            <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold">Wakeman Heating Assistant</h3>
+                <button id="closeChat" class="text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="chatMessages" class="p-4 h-96 overflow-y-auto bg-gray-50">
+                <!-- Messages will appear here -->
+                <div class="mb-4">
+                    <div class="bg-blue-100 p-3 rounded-lg inline-block">
+                        <p class="text-gray-800">Hello! I'm your Wakeman Heating assistant. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-4 border-t">
+                <div class="flex">
+                    <input type="text" id="messageInput" class="flex-1 p-2 border border-gray-300 rounded-l" placeholder="Type your message...">
+                    <button id="sendMessage" class="bg-blue-600 text-white p-2 rounded-r">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Trigger Button (Always visible) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="openChat" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
+            <i class="fas fa-comment-dots text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Simple JavaScript for Chatbot Toggle -->
+    <script>
+        // Chat toggle functionality
+        document.getElementById('openChat').addEventListener('click', function() {
+            document.getElementById('chatWidget').classList.remove('hidden');
+            this.classList.add('hidden');
+        });
+        
+        document.getElementById('closeChat').addEventListener('click', function() {
+            document.getElementById('chatWidget').classList.add('hidden');
+            document.getElementById('openChat').classList.remove('hidden');
+        });
+        
+        document.getElementById('chatBotTrigger').addEventListener('click', function() {
+            document.getElementById('chatWidget').classList.remove('hidden');
+            document.getElementById('openChat').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
